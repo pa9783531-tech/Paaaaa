@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b0d16" />
+  <title>PakesY — BedWars Creator Universe</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./assets/style.css" />
+</head>
+<body>
+  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+  <div class="layout" id="layout">
+    <aside class="sidebar">
+      <a href="#" class="brand" aria-label="PakesY Home"><span class="brand-symbol">P<span class="brand-spark">✦</span></span><span class="brand-word">Pakes<span>Y</span></span></a>
+      <div class="sidebar-sub">CREATOR UNIVERSE <span class="online-light"></span></div>
+      <div class="side-title" data-i18n="menu">MENU</div>
+      <nav class="side-nav" aria-label="Main navigation">
+        <button class="nav-link active" data-tab="for-you"><span class="nav-icon">⌂</span><span data-i18n="discover">Discover</span></button>
+        <button class="nav-link" data-tab="trending"><span class="nav-icon">⚡</span><span data-i18n="trending">Trending</span></button>
+        <button class="nav-link" data-tab="mine"><span class="nav-icon">▤</span><span data-i18n="myVideos">My videos</span></button>
+      </nav>
+            <div class="side-spacer"></div>
+      <div class="creator-card"><div class="creator-card-glow"></div><span class="crown">♛</span><div class="creator-card-title" data-i18n="creatorMode">Creator Mode</div><p data-i18n="creatorNote">Your uploads always lead the feed.</p><button class="creator-card-action" id="sidebarUpload"><span data-i18n="uploadNow">Upload now</span> ↗</button></div>
+      <div class="sidebar-bottom"><span class="status-dot"></span><span data-i18n="privateStudio">PRIVATE STUDIO</span><small>v1.0</small></div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="mobile-brand">P<span>✦</span> PakesY</div>
+        <div class="search-wrap"><span class="search-icon">⌕</span><input id="search" type="search" placeholder="Search BedWars videos..." data-i18n-placeholder="search" aria-label="Search videos"/><kbd>⌘ K</kbd></div>
+        <div class="top-actions"><select id="language" title="Language" aria-label="Language"><option value="fa">🇮🇷 فارسی</option><option value="ur">🇵🇰 اردو</option><option value="en">🇬🇧 English</option><option value="ar">🇸🇦 العربية</option><option value="hi">🇮🇳 हिन्दी</option><option value="tr">🇹🇷 Türkçe</option><option value="es">🇪🇸 Español</option><option value="zh">🇨🇳 中文</option></select><button class="top-add" id="topUpload"><span>＋</span><span data-i18n="create">Create</span></button><button class="avatar" id="userMenu" title="Account">P</button></div>
+      </header>
+      <div class="mobile-nav"><button data-tab="for-you" class="active" data-i18n="discover">Discover</button><button data-tab="trending" data-i18n="trending">Trending</button><button data-tab="mine" data-i18n="myVideos">My videos</button></div>
+      <div class="main-inner">
+        <div class="preview-banner hidden" id="previewBanner" role="status"><span class="preview-icon">ⓘ</span><span data-i18n="previewInfo">Preview mode: to upload and edit videos, run start_windows.bat on Windows.</span></div>
+        <section class="hero">
+          <div class="hero-noise"></div>
+          <div class="hero-info"><div class="eyebrow"><span class="eyebrow-flare">✦</span><span data-i18n="heroLabel">THE NEXT LEVEL IS HERE</span></div><h1><span data-i18n="heroTitleA">Your game.</span><br/><em data-i18n="heroTitleB">Your universe.</em></h1><p data-i18n="heroDesc">Upload epic BedWars moments, remix clips and build your own video world.</p><div class="hero-buttons"><button id="heroUpload" class="primary-button"><span>＋</span><span data-i18n="uploadVideo">Upload video</span></button><button id="heroExplore" class="ghost-button"><span data-i18n="explore">Explore videos</span><span>↗</span></button></div><div class="hero-tag"><span class="pulse-dot"></span><span data-i18n="heroFeature">AUTO EDIT • BEDWARS • 8 LANGUAGES</span></div></div>
+          <div class="hero-art" aria-hidden="true"><div class="hero-orbit orbit-1"></div><div class="hero-orbit orbit-2"></div><div class="pixel-field"><div class="cube cube-1"></div><div class="cube cube-2"></div><div class="cube cube-3"></div><div class="cube cube-4"></div><div class="cube cube-5"></div><div class="pixel-title">BED<span>WARS</span></div><div class="sword">⚔</div></div><div class="floating-pill pill-1">⚡ <span>CLUTCH!</span></div><div class="floating-pill pill-2">✦ <span>TOP CREATOR</span></div></div>
+        </section>
+        <div class="stats-strip"><div class="stat"><span class="stat-icon purple">▶</span><div><div class="stat-label" data-i18n="totalVideos">YOUR UPLOADS</div><strong id="statVideos">0</strong></div></div><div class="stat"><span class="stat-icon coral">♥</span><div><div class="stat-label" data-i18n="totalLikes">TOTAL LIKES</div><strong id="statLikes">0</strong></div></div><div class="stat"><span class="stat-icon blue">▤</span><div><div class="stat-label" data-i18n="totalComments">COMMENTS</div><strong id="statComments">0</strong></div></div><div class="stat"><span class="stat-icon lime">◈</span><div><div class="stat-label" data-i18n="earnings">EARNINGS</div><strong id="statEarnings">₨ 0</strong></div></div></div>
+        <section class="feed-head" id="videoFeed"><div><div class="section-eyebrow" data-i18n="curatedForYou">CURATED FOR YOU</div><h2><span data-i18n="feedTitle">The video arena</span><span class="headline-dot">.</span></h2><p data-i18n="feedSubtitle">Fresh moments from your PakesY universe.</p></div><div class="section-actions"><button class="chip active" data-chip="for-you" data-i18n="forYou">For You</button><button class="chip" data-chip="trending" data-i18n="trending">Trending</button><button class="chip" data-chip="mine" data-i18n="myVideos">My Videos</button></div></section>
+        <div class="video-grid" id="videos"></div>
+        <footer class="footer"><span>PakesY <span class="footer-star">✦</span> 2026</span><span data-i18n="footer">MAKE MOMENTS LEGENDARY.</span></footer>
+      </div>
+    </main>
+  </div>
+
+  <div class="overlay" id="authOverlay"><div class="auth-card"><div class="auth-spark">✦</div><div class="auth-logo">Pakes<span>Y</span></div><p class="auth-small" data-i18n="authPrivate">YOUR PRIVATE CREATOR UNIVERSE</p><h2 id="authHeading" data-i18n="welcome">Welcome back</h2><p id="authDescription" data-i18n="signInNote">Sign in to enter your studio.</p><form id="authForm"><label data-i18n="email">Email address</label><input type="email" id="authEmail" required autocomplete="email" placeholder="pa9783531@gmail.com"/><label data-i18n="password">Password</label><input type="password" id="authPassword" required autocomplete="current-password" minlength="8" placeholder="••••••••"/><button class="primary-button full" type="submit" id="authSubmit" data-i18n="signIn">Sign in →</button><div id="authError" class="form-error" role="alert"></div></form><button type="button" class="auth-switch" id="authSwitch">Create an account</button><p class="auth-bottom"><span class="status-dot"></span><span data-i18n="localOnly">Only your account can access this studio.</span></p></div></div>
+  <div class="overlay hidden" id="uploadOverlay"><div class="modal upload-modal"><div class="modal-top"><div><div class="section-eyebrow" data-i18n="createSomething">CREATE SOMETHING EPIC</div><h2 data-i18n="newUpload">New video</h2></div><button class="icon-close" data-close="uploadOverlay">✕</button></div><form id="uploadForm"><label class="dropzone" id="dropzone"><input type="file" id="videoFile" accept="video/mp4,video/quicktime,video/webm,video/x-matroska,video/*" required hidden/><span class="upload-illustration">↑</span><strong data-i18n="dropVideo">Choose your BedWars video</strong><small id="selectedFile" data-i18n="fileHint">MP4, MOV, WEBM, MKV • Max 750 MB</small></label><div class="field"><label for="videoTitle" data-i18n="videoTitle">Video title</label><input id="videoTitle" required maxlength="140" placeholder="The best BedWars clutch ever!"/></div><div class="field"><label for="videoDescription" data-i18n="description">Description</label><textarea id="videoDescription" rows="3" maxlength="1000" placeholder="Tell your story..."></textarea></div><div class="toggle-area"><div class="toggle-icon">✧</div><div class="toggle-copy"><strong data-i18n="autoEdit">Auto Edit</strong><small data-i18n="autoEditDesc">Automatically cuts long videos, improves color and sharpness, then publishes.</small></div><label class="switch"><input id="autoEdit" type="checkbox" checked/><span></span></label></div><button type="submit" id="publish" class="primary-button full"><span data-i18n="editAndPublish">Edit & publish automatically</span> <span>↗</span></button><div id="uploadStatus" class="upload-status"></div></form></div></div>
+  <div class="overlay hidden" id="viewerOverlay"><div class="modal viewer-modal"><div class="modal-top"><div><div class="section-eyebrow">NOW PLAYING</div><h2 id="viewerTitle">BedWars</h2></div><button class="icon-close" data-close="viewerOverlay">✕</button></div><div class="viewer-layout"><div class="player-side"><video id="videoPlayer" controls playsinline preload="metadata"></video><div class="player-meta"><span id="playerAuthor"></span><span id="playerStats"></span></div><p id="playerDesc"></p><div class="player-buttons"><button class="ghost-button" id="simulateBtn">⚡ <span data-i18n="boost48">Complete 48h engagement</span></button><button class="danger-button hidden" id="deleteBtn" data-i18n="deleteVideo">Delete video</button></div></div><div class="comment-side"><h3><span data-i18n="comments">Comments</span> <span id="commentCount"></span></h3><form id="commentForm"><input id="commentInput" maxlength="500" required data-i18n-placeholder="writeComment" placeholder="Write a comment..."/><button class="comment-submit" type="submit">➤</button></form><div id="commentList" class="comment-list"></div></div></div></div></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="./assets/app.js"></script>
+</body>
+</html>

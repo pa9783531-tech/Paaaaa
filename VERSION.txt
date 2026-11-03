@@ -1,0 +1,1 @@
+PakesY Private Studio v4.0 — fixed relative asset links for GitHub Pages and local preview; Windows auto-install and Python video backend preserved.
